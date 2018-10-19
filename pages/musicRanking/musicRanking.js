@@ -11,7 +11,7 @@ Page({
   },
 // 点击排行榜
   click:function(e){
-      // console.log(e)
+      console.log(e)
     wx.showLoading({
       title:"加载中"
     })
@@ -26,10 +26,10 @@ Page({
         method: 'GET',
         dataType: 'json',
         responseType: 'text',
-        success: (e)=>{
-            console.log(e)
+        success: (es)=>{
+            console.log(es)
             wx.navigateTo({
-              url: '../musicInfo/musicInfo?data='+encodeURIComponent(JSON.stringify(e.data)),
+              url: '../musicInfo/musicInfo?data='+encodeURIComponent(JSON.stringify(es.data))+"&title="+e.currentTarget.dataset.title,
               success: (result)=>{
                 wx.hideLoading()
               },
@@ -65,7 +65,7 @@ Page({
           dataType: 'json',
           responseType: 'text',
           success: (e)=>{
-            // console.log(e)
+            console.log(e)
             let toplist = e.data.data.topList
            
             let fun =()=>{

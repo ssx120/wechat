@@ -1,9 +1,20 @@
 <!--pages/musicInfo/musicInfo.wxml-->
 <view class="warp" hover-class="none" hover-stop-propagation="false">
-    <view class="" hover-class="none" hover-stop-propagation="false">
-        <image class="" src="" mode="widthFix" lazy-load="false" binderror="" bindload="">
-            
-        </image>
+    <view class="title" hover-class="none" hover-stop-propagation="false">
+        <view class="title_t" hover-class="none" hover-stop-propagation="false">
+            <image class="" src="{{titleIMG}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="text" hover-class="none" hover-stop-propagation="false">
+                <text class="" selectable="false" space="false" decode="false">
+                    {{title}}
+                </text>
+                <text class="" >
+                    {{date}}更新
+                </text>
+            </view>     
+         </view>
+         <view class="play" hover-class="none" hover-stop-propagation="false">
+             播放全部
+         </view>
     </view>
 
 

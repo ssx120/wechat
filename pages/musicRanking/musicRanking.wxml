@@ -4,7 +4,7 @@
         
     </view>
     <block wx:for="{{list}}">
-        <view class="list clearfix" hover-class="none" hover-stop-propagation="false" bind:tap="click" data-id="{{item.num}}">
+        <view class="list clearfix" hover-class="none" hover-stop-propagation="false" bind:tap="click" data-id="{{item.num}}" data-title="{{item.title}}">
             <image class="img_left" src="{{item.url}}" mode="idthFix" lazy-load="false" binderror="" bindload="">
             </image>
             <view class="text_r" hover-class="none" hover-stop-propagation="false">

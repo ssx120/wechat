@@ -8,3 +8,19 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.warp{
+  font-size: 28rpx;
+  background: #F4F4F4;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+/* 清除浮动 */
+.clearfix::after{
+  clear: both;
+  content: "";
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
