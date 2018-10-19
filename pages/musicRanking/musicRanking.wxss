@@ -1,0 +1,58 @@
+/* pages/musicRanking/musicRanking.wxss */
+.placeholder{
+    height: 20rpx;
+}
+.warp{
+    font-size: 28rpx;
+    background: #F4F4F4;
+}
+ image{
+    width: 100%;
+    height: 100%;
+}
+/* 清除浮动 */
+.clearfix::after{
+    clear: both;
+    content: "";
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.list{
+    box-sizing: border-box;
+    height: 200rpx;
+    margin: 20rpx;
+    background: #fff;
+}
+.title{
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+.list image{
+    width: 200rpx;
+}
+.img_left{
+    float: left;
+}
+.text_r{
+    position: relative;
+    width: 65%;
+    float: left;
+    margin-left:20rpx; 
+}
+.topic_arrow{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+    -webkit-transform: rotate(-45deg);
+}
+.textline{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

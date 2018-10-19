@@ -1,0 +1,36 @@
+/* pages/music/music.wxss */
+.warp{
+    font-size: 28rpx;
+    background: #F4F4F4;
+}
+ image{
+    width: 100%;
+    height: 100%;
+}
+
+.diantai{
+    width: 100%;
+    margin: 30rpx 0;
+    display: flex;
+    justify-content: space-around;
+}
+.diantai .rege{
+    box-sizing: border-box;
+    width: 45%;
+    background: #fff;
+    position: relative;
+    padding-bottom: 50rpx;
+}
+.icon{
+    width: 50rpx;
+    height: 50rpx;
+    background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png?max_age=19830212&d=20151105145423')no-repeat top left;
+    background-size: cover;
+    position: absolute;
+    right: 10rpx;
+    bottom: 105rpx;
+}
+.center{
+    display: block;
+    text-align: center;
+}

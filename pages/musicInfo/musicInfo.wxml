@@ -1,0 +1,11 @@
+<!--pages/musicInfo/musicInfo.wxml-->
+<view class="warp" hover-class="none" hover-stop-propagation="false">
+    <view class="" hover-class="none" hover-stop-propagation="false">
+        <image class="" src="" mode="widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+    </view>
+
+
+
+</view>

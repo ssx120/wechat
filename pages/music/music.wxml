@@ -1,0 +1,48 @@
+<!--pages/music/music.wxml-->
+<view class="warp" hover-class="none" hover-stop-propagation="false">
+<swiper class="" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="true"  current="0"  interval="5000" duration="1000" circular="true"  display-multiple-items="1" skip-hidden-item-layout="false" >
+    <block wx:for="{{swiperImg}}">
+         <swiper-item class="swiper" item-id="">
+             <image class="" src="{{item}}" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+                 
+             </image>
+        </swiper-item>
+    </block>
+</swiper>
+<block> 电台 </block>
+ <view class="diantai" hover-class="none" hover-stop-propagation="false">
+ <!--  -->
+     <view class="rege" hover-class="none" hover-stop-propagation="false">
+        <image class="" src="https://y.gtimg.cn/music/photo/radio/track_radio_199_13_1.jpg?max_age=2592000" mode="widthFix" lazy-load="true" binderror="" bindload="">
+        </image>
+        <view class="icon" hover-class="none" hover-stop-propagation="false">
+        </view>
+        <text class="" selectable="false" space="false" decode="false">
+            热歌
+        </text>
+     </view>
+     <!--  -->
+     <view class="rege" hover-class="none" hover-stop-propagation="false">
+        <image class="" src="https://y.gtimg.cn/music/photo/radio/track_radio_307_13_1.jpg?max_age=2592000" mode="widthFix" lazy-load="true" binderror="" bindload="">
+        </image>
+        <view class="icon" hover-class="none" hover-stop-propagation="false">
+        </view>
+        <text class="" selectable="false" space="false" decode="false">
+            一人一首招牌歌
+        </text>
+     </view>
+ </view>
+ <text class="" selectable="false" space="false" decode="false">
+     热门歌曲
+ </text>
+ <text class="center" selectable="false" space="false" decode="false">
+     去客户端发现更多好音乐 >
+ </text>
+ <text class="center" selectable="false" space="false" decode="false">
+     查看电脑版网页
+ </text>
+ <text class="center" selectable="false" space="false" decode="false">
+     QQ音乐
+ </text>
+</view>
+

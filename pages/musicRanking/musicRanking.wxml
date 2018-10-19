@@ -1,0 +1,21 @@
+<!--pages/musicRanking/musicRanking.wxml-->
+<view class="warp" hover-class="none" hover-stop-propagation="false" hidden="{{show}}">
+    <view class="placeholder" hover-class="none" hover-stop-propagation="false">
+        
+    </view>
+    <block wx:for="{{list}}">
+        <view class="list clearfix" hover-class="none" hover-stop-propagation="false" bind:tap="click" data-id="{{item.num}}">
+            <image class="img_left" src="{{item.url}}" mode="idthFix" lazy-load="false" binderror="" bindload="">
+            </image>
+            <view class="text_r" hover-class="none" hover-stop-propagation="false">
+                <view class="title" selectable="false" space="false" decode="false">
+                    {{item.title}}
+                </view>
+                <view class="textline" wx:for="{{item.info}}" wx:for-item="sing" wx:for-index="ind"  hover-class="none" hover-stop-propagation="false">
+                    {{ind+1}} {{sing.songname}}  -{{sing.singername}}
+                </view>
+                 <i class="topic_arrow"></i>
+            </view>
+        </view>    
+    </block>
+</view>
