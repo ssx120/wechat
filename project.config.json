@@ -27,13 +27,36 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/music/music",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "播放列表",
+					"pathName": "pages/musicInfo/musicInfo",
+					"query": "id=4&title=流行榜"
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": ""
+				}
+			]
 		}
 	}
 }

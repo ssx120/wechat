@@ -15,31 +15,17 @@ Page({
     wx.showLoading({
       title:"加载中"
     })
-     wx.request({
-        url: 'https://route.showapi.com/213-4',
-        data: {
-          showapi_appid:this.data.appid,
-          showapi_sign:this.data.showapi_sign,
-          topid:e.currentTarget.dataset.id
-        },
-        header: {'content-type':'application/json'},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: (es)=>{
-            console.log(es)
-            wx.navigateTo({
-              url: '../musicInfo/musicInfo?data='+encodeURIComponent(JSON.stringify(es.data))+"&title="+e.currentTarget.dataset.title,
-              success: (result)=>{
-                wx.hideLoading()
-              },
-              fail: ()=>{},
-              complete: ()=>{}
-            });
-        },
-        fail: ()=>{},
-        complete: ()=>{}
-      });
+     wx.navigateTo({
+       url:
+         "../musicInfo/musicInfo?id="+ e.currentTarget.dataset.id+
+         "&title=" +
+         e.currentTarget.dataset.title,
+       success: result => {
+         wx.hideLoading();
+       },
+       fail: () => {},
+       complete: () => {}
+     });
   },
   /**
    * 生命周期函数--监听页面加载

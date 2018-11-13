@@ -13,12 +13,20 @@
             </view>     
          </view>
          <view class="play" hover-class="none" hover-stop-propagation="false">
-           <view class="stop" hover-class="none" hover-stop-propagation="false">
+           <view class="stop" wx:if="{{plays}}" hover-class="none" bind:tap="play" hover-stop-propagation="false">
                播放全部
+           </view> 
+           <view class="btn clearfix"  wx:else hover-class="none" hover-stop-propagation="false">
+                 <view class="play_a" wx:if="{{!playlist}}" bind:tap="bofang" hover-class="none" hover-stop-propagation="false"></view>
+                 <view class="play_b" wx:else bind:tap="pause" hover-class="none" hover-stop-propagation="false"></view>
+                 <h2>{{musicName}}</h2>
+                 <!-- <block wx:for="{{lyric}}">
+                        <text class="" selectable="false" space="false" decode="false">
+                            {{}}
+                        </text>
+                 </block> -->
            </view>
-            <view class="play_a" hover-class="none" hover-stop-propagation="false">
-                
-            </view>
+            
          </view>
          <image class="bgimg" src="{{bag}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
     </view>
@@ -27,7 +35,7 @@
      排行榜  共100首
     </view>
     <block wx:for="{{toplist}}">
-        <view class="list_li clearfix" hover-class="none" hover-stop-propagation="false">
+        <view class="list_li clearfix {{colorstyle == item.songid ? 'colorstyle':''}}" bind:tap="clickplay" data-content="{{item}}" data-index="{{index}}" hover-class="none" hover-stop-propagation="false">
             <view class="li" hover-class="none" hover-stop-propagation="false">
                 {{index+1}}
             </view>
@@ -57,6 +65,4 @@
        
     </view>
 </view>
-    
-
 </view>
