@@ -1,34 +1,20 @@
-// pages/musicInfo/musicInfo.js
-    let date = new Date();
-    let month =  date.getMonth()+1
-    let ymd = date.getFullYear() + " / " + month + " / " + date.getDate() 
+// pages/h5/h5.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      title:"",
-      date:ymd,
-      titleIMG:"",
-      bag:"",
-      toplist:null
-  },
 
+  },
+  message:function(){
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (e) {
-    let data =JSON.parse(decodeURIComponent(e.data))
-    console.log(data)
-    console.log(e)
-    this.setData({
-      title:e.title,
-      titleIMG:data.showapi_res_body.pagebean.songlist[0].albumpic_small,
-      bag:data.showapi_res_body.pagebean.songlist[0].albumpic_big,
-      toplist:data.showapi_res_body.pagebean.songlist
-    })
-     console.log(this.data.toplist)
+  onLoad: function (options) {
+
   },
 
   /**

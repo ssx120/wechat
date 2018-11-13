@@ -1,11 +1,13 @@
 {
   "pages":[
+    "pages/test/test",
     "pages/music/music",
     "pages/musicRanking/musicRanking",
     "pages/musicSearch/musicSearch",
     "pages/musicInfo/musicInfo",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/h5/h5"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -22,21 +24,18 @@
     "list": [
       {
         "pagePath": "pages/music/music",
-        "text": "推荐",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "推荐"
+       
       },
       {
         "pagePath":  "pages/musicRanking/musicRanking",
-        "text": "排行榜",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "排行榜"
+       
       },
       {
         "pagePath": "pages/musicSearch/musicSearch",
-        "text": "搜索",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "搜索"
+      
       }
     ]
   

@@ -1,0 +1,167 @@
+
+<!-- 引入其他页面的模板 -->
+<import src="../index/index.wxml" />
+<!-- 引入其他页面的内容 -->
+<include src="../index/index.wxml" />
+<template is="index"></template>
+<text>{{content}}</text>
+<view class="" hover-class="none" hover-stop-propagation="false" hidden="{{falg}}">
+    {{num1+num2}}
+</view>
+<!-- 条件 -->
+<view class="" wx:if="{{falg}}" hover-class="none" hover-stop-propagation="false"></view>
+<view class="" wx:elif="{{}}" hover-class="none" hover-stop-propagation="false"></view>
+<view class="" wx:else="{{}}" hover-class="none" hover-stop-propagation="false"></view>
+<!-- 循环 -->
+<view class="" wx:for="{{array}}" hover-class="none" hover-stop-propagation="false">
+    <view class="" hover-class="none" hover-stop-propagation="false">
+        {{array[index]}}+{{index}} = {{item}}
+    </view>
+</view>
+<view class="" wx:for="{{array}}" wx:for-item="j" wx:for-index="k" hover-class="none" hover-stop-propagation="false">
+    {{j}}------{{k}}
+</view>
+<!-- 模板 -->
+<template name="test1">
+    <view class="" hover-class="none" hover-stop-propagation="false">
+        {{item.age}}-----{{item.name}}
+    </view>
+</template>
+<view class="" wx:for="{{user}}" hover-class="none" hover-stop-propagation="false">
+    <template is="test1" data="{{item}}"></template>
+</view>
+<!-- 事件 按钮 -->
+<button disabled="{{true}}" bind:touchstart="test1" size="mini" type="primary" plain="{{false}}">
+    dss
+</button>
+<button loading="{{true}}" catch:touchstart="test1" size="default" type="warn">dss</button>
+<button hover-class="button-hover">按钮</button>
+<!-- input组件 -->
+<input type="text" value="" bindinput="test" confirm-type="next" placeholder="文本内容" placeholder-style="color:red;" disabled="{{false}}" />
+<input type="idcard" value="" password="{{true}}" />
+<input type="digit" value="digit" />
+<input type="number" value="number" />
+<!-- icon -->
+<icon class="" type="clear" size="16" color=""></icon>
+<!-- 滑块slider -->
+<slider max="100" min="0" show-value="{{true}}" step="20"></slider>
+<slider class="" min="0" max="100" step="1" value="" show-value="false" backgroundColor="#e9e9e9" block-size="28" block-color="#ffffff" bindchanging="" bindchange=""></slider>
+<!-- switch选中组件 -->
+<switch class="" checked="true" type="switch" bindchange=""></switch>
+<switch class="" checked="true" color="red" type="checkbox" bindchange="switch"></switch>
+<!-- radio 选择器 -->
+<radio-group bindchange="sex">
+    <radio value="男" checked="{{true}}" disabled="{{true}}">男</radio>
+    <radio value="女" color="red">女</radio>
+</radio-group>
+<checkbox-group bindchange="">
+    <checkbox value="打球">打球</checkbox>
+    <checkbox value="打球">游泳</checkbox>
+    <checkbox value="打球">敲代码</checkbox>
+</checkbox-group>
+<!-- label -->
+<label for="o">点击</label>
+<radio class="" id="o" value="" color="">
+    
+</radio>
+<textarea class="" value="" placeholder="textarea" placeholder-style="" placeholder-class="textarea-placeholder" 
+    maxlength="140" auto-focus="false" focus="false" auto-height="" 
+    bindinput="" bindfocus="" bindblur="" bindconfirm="" bindlinechange="%{15}">
+    
+</textarea>
+<!-- form表单 -->
+<form class=""  bindsubmit="submit" >
+    <input type="text" value="1234545645" name="input" />
+    <radio-group bindchange="" name="radio">
+        <radio value="男">男</radio>
+        <radio value="女">女</radio>
+    </radio-group>
+    <checkbox-group bindchange="" name="checkbox">
+        <checkbox value="羽毛球"> 羽毛球</checkbox>
+        <checkbox value="排球"> 排球</checkbox>
+    </checkbox-group>
+    <slider class="" min="0" max="100" step="1"  value="" show-value="false" 
+        backgroundColor="#e9e9e9" block-size="28" block-color="#ffffff" bindchanging="" bindchange="">
+    </slider>
+    <switch class="" checked="false" type="switch" bindchange="">
+    </switch>
+    <button form-type="reset" type="warn">重置</button>
+    <button form-type="submit" type="primary">提交</button>
+</form>
+<!-- 选择器 -->
+<picker class="" range="{{user}}" range-key="name" value="0" bindchange="picker">
+当前选择{{user[value].name}}
+</picker>
+<!-- time选择器 -->
+<picker class="" mode="time" value="12:30" start="12:30" end="12:30" bindchange="loop">
+    时间：{{time}}
+</picker>
+<!-- 日期选择器 -->
+<picker class="" fields="year" mode="date" value="1971-12-12" start="1972-12-12" end="2018-1-1" bindchange="date" bindcancel="">
+    日期{{date}}
+</picker>
+<!-- picker-view -->
+<picker-view value="{{[3,2,4]}}" indicator-class="" indicator-style="" mask-class="" mask-style="" bindchange="">
+    <picker-view-column>
+    <view wx:for="{{array}}" >{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+    <view wx:for="{{array}}" >{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+    <view wx:for="{{array}}" >{{item}}</view>
+    </picker-view-column>
+</picker-view>
+<!-- 地区选择器 -->
+<picker class=""  mode="region"  bindchange="city" bindcancel="">
+    地区{{region}}
+</picker>
+<!-- 跳转 -->
+<navigator class="" target="" url="../demo/demo" hover-class="navigator-hover" open-type="redirect">
+    跳转
+</navigator>
+<button bind:tap="url" type="warn">点击跳转</button>
+<!-- swiper -->
+<!-- <swiper class="" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" current="0" current-item-id="" interval="5000" duration="1000" circular="false" vertical="false" 
+previous-margin="false" next-margin"0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
+    <swiper-item class="" item-id="">
+        
+    </swiper-item>
+  
+</swiper> -->
+<!-- loading -->
+<button bind:tap="loading">loading</button>
+<!-- 底部弹窗 -->
+<button bind:tap="buttom"> 底部弹窗</button>
+<!-- audio 音频-->
+<audio id="" src="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46" loop="false" controls="false" poster="" name="未知音频" author="未知作者" binderror="" bindplay="" bindpause="" bindtimeupdate="" bindended="">
+    
+</audio>
+<!-- video音频 -->
+<video class="" src="" initial-time="0" autoplay="false" loop="false" muted="false" direction="0" 
+    bindplay="" bindpause="" bindended="" bindtimeupdate="" bindwaiting="" binderror="">
+    
+</video>
+<image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+    
+</image>
+<canvas class="" canvas-id="" bindtouchstart="" bindtouchmove="" bindtouchend="" bindtouchcancel="" bindlongtap="" binderror=""></canvas>
+<!-- 网络请求 -->
+<button bind:tap="request">request请求</button>
+<!-- scroll-view 滚动 -->
+<scroll-view class="" scroll-x="false" scroll-y="false" upper-threshold="50" lower-threshold="50" 
+    scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" 
+    bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+    
+</scroll-view>
+<!-- 选择图片 -->
+<button bind:tap="selectImg">选择图片</button>
+<image class="" src="{{imgSrc}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+<!-- 预览图片 -->
+<button bind:tap="yulan">预览图片</button>
+<!-- 获取图片信息 -->
+<button bind:tap="getimginfo">获取图片信息</button>
+<!-- 授权 编辑授权-->
+<button bind:tap="getseting">获取授权</button>
+<!--弹窗授权  -->
+<button bind:tap="alert">弹窗授权</button>

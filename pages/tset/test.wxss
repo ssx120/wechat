@@ -1,0 +1,17 @@
+/* pages/tset/test.wxss */
+.button-hover{
+    background: #000;
+    color: aliceblue;
+}
+input{
+    height: 100rpx;
+    margin: 10rpx;
+    background: skyblue
+}
+picker-view{
+    height: 400px;
+    background: darkmagenta;
+    /* line-height: 400px; */
+    text-align: center;
+    margin: 50px auto;
+}

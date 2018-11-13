@@ -1,0 +1,8 @@
+<!--pages/canvas/canvas.wxml-->
+<button type="primary" bind:tap="send">生成海报</button>
+<view class="warps" hover-class="none" hover-stop-propagation="false" hidden="{{show}}">
+     <canvas class="canvas" canvas-id="canvas" style="height:70%;width:80%;"></canvas>
+      <button class="btn" bind:tap="download" type="default" size="mini">保存图片</button>
+</view>
+
+     

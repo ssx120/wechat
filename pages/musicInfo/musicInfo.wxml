@@ -1,22 +1,62 @@
 <!--pages/musicInfo/musicInfo.wxml-->
 <view class="warp" hover-class="none" hover-stop-propagation="false">
-    <view class="title" hover-class="none" hover-stop-propagation="false">
+    <view class="title" hover-class="none" hover-stop-propagation="false" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
         <view class="title_t" hover-class="none" hover-stop-propagation="false">
             <image class="" src="{{titleIMG}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
             <view class="text" hover-class="none" hover-stop-propagation="false">
-                <text class="" selectable="false" space="false" decode="false">
+                <text class="toplist" selectable="false" space="false" decode="false">
                     {{title}}
                 </text>
-                <text class="" >
+                <text class="date" >
                     {{date}}更新
                 </text>
             </view>     
          </view>
          <view class="play" hover-class="none" hover-stop-propagation="false">
-             播放全部
+           <view class="stop" hover-class="none" hover-stop-propagation="false">
+               播放全部
+           </view>
+            <view class="play_a" hover-class="none" hover-stop-propagation="false">
+                
+            </view>
          </view>
+         <image class="bgimg" src="{{bag}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
     </view>
-
-
+<view class="list" hover-class="none" hover-stop-propagation="false" style="transform: translate(0px, 0px) translateZ(0px);">
+    <view class="list_title" selectable="false" space="false" decode="false">
+     排行榜  共100首
+    </view>
+    <block wx:for="{{toplist}}">
+        <view class="list_li clearfix" hover-class="none" hover-stop-propagation="false">
+            <view class="li" hover-class="none" hover-stop-propagation="false">
+                {{index+1}}
+            </view>
+            <view class="li_text" hover-class="none" hover-stop-propagation="false">
+                 <view class="li_songname" selectable="false" space="false" decode="false">
+                     {{item.songname}}
+                 </view>
+                 <view class="li_singername" selectable="false" space="false" decode="false">
+                     {{item.singername}}
+                 </view>
+            </view>
+        </view>
+    </block>
+    <view class="" hover-class="none" hover-stop-propagation="false">
+        <view class="" hover-class="none" hover-stop-propagation="false">
+            简介
+        </view>
+        <text class="" selectable="false" space="false" decode="false">
+         追踪全球音乐流行趋势，乐坛最热门歌曲，网络蹿红歌曲根据地。展示QQ音乐用户的关注热度，体现歌曲飙升程度的潮流音乐排行榜。
+        </text>
+        <text class="" selectable="false" space="false" decode="false">
+            更新时间：每天更新
+        </text>
+        <text class="" selectable="false" space="false" decode="false">
+            歌曲数量：100首
+       </text>
+       
+    </view>
+</view>
+    
 
 </view>
